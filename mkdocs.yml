@@ -1,0 +1,42 @@
+site_name: Webdevelopment Cheatsheet
+site_author: Carina Arnold
+
+theme:
+  name: amelia
+  nav_style: dark
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+  features: 
+    - toc.integrate
+    - navigation.path
+    - navigation.tracking
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - docs/includes/abbreviations.md
+  - pymdownx.superfences
+  - abbr
+  - footnotes
+
+
+extra_css:
+  - stylesheets/css.css
+  - stylesheets/bootswatch.less
+  - stylesheets/variables.less
+
+

@@ -1,0 +1,9 @@
+carina@carina-D3403-A1:~$ sudo chgrp -R lamp /opt/lampp/
+carina@carina-D3403-A1:~$ sudo chmod -R 770 /opt/lampp/ 
+carina@carina-D3403-A1:~$ whereis phpmyadmin
+phpmyadmin: /etc/phpmyadmin /usr/share/phpmyadmin
+carina@carina-D3403-A1:~$ sudo chmod -R 770 /opt/lampp/htdocs
+carina@carina-D3403-A1:~$ sudo chmod -R 777 /opt/lampp
+carina@carina-D3403-A1:~$ 
+
+

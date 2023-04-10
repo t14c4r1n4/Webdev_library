@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Carina Arnold">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Webserver einrichten - Webdevelopment Cheatsheet</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+        <link href="../../stylesheets/css.css" rel="stylesheet">
+        <link href="../../stylesheets/bootswatch.less" rel="stylesheet">
+        <link href="../../stylesheets/variables.less" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Webdevelopment Cheatsheet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Database <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../database/allgemein/">Relationales Datenbanksystem (RDBS)</a>
+</li>
+                                    
+<li >
+    <a href="../../database/befehle/">Befehle</a>
+</li>
+                                    
+<li >
+    <a href="../../database/joins/">JOINS</a>
+</li>
+                                    
+<li >
+    <a href="../../database/operatoren/">Operatoren</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Includes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../includes/abbreviations/">Abbreviations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informatik <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../informatik/Allgemeines/">Grundlagen der Informationstechnik</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../javascript/basics/">Output</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../Rechte/">Rechte</a>
+</li>
+                                    
+<li >
+    <a href="../basics/">Linux command basics</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Webserver einrichten</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Php <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../php/datentypen/">PHP</a>
+</li>
+                                    
+<li >
+    <a href="../../php/konfiguration/">php.ini</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/exception_handling/">Exception Handling</a>
+</li>
+                                    
+<li >
+    <a href="../../python/modules/">Modularisierung</a>
+</li>
+                                    
+<li >
+    <a href="../../python/oop/">OOP</a>
+</li>
+                                    
+<li >
+    <a href="../../python/virtual/">Virtuelle Umgebung erstellen</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/frameworks/create_django/">Django</a>
+</li>
+            
+<li >
+    <a href="../../python/frameworks/django/">Django</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Functions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/functions/functions/">Funktionen</a>
+</li>
+            
+<li >
+    <a href="../../python/functions/functions_begriffe/">Begriffe</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/libraries/l_math/">Math</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_random/">L random</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_tkinter/">Tkinter</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../react/jsx/">JSX</a>
+</li>
+                                    
+<li >
+    <a href="../../react/react/">React</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../basics/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../php/datentypen/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#falsche-berechtigung-fur-sudo">Falsche Berechtigung für sudo</a></li>
+        <li class="main "><a href="#datei-paket-finden">Datei/ Paket finden</a></li>
+        <li class="main "><a href="#apache-webserver-installieren">Apache-Webserver installieren</a></li>
+            <li><a href="#firewall-anpassen">Firewall anpassen</a></li>
+            <li><a href="#webserver-testen">Webserver testen</a></li>
+            <li><a href="#verwalten-des-apache-prozesses">Verwalten des Apache-Prozesses</a></li>
+            <li><a href="#virtuelle-hosts-einrichten">Virtuelle Hosts einrichten</a></li>
+            <li><a href="#php-installieren">PHP installieren</a></li>
+            <li><a href="#mysql-installieren">MySQL installieren</a></li>
+            <li><a href="#datenbank-fur-wp-anlegen">Datenbank für WP anlegen</a></li>
+            <li><a href="#ordner-on-the-fly-als-subdomain-nutzen">Ordner on the fly als Subdomain nutzen</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h4 id="falsche-berechtigung-fur-sudo">Falsche Berechtigung für sudo</h4>
+<dl>
+<dt><code>/etc/sudo.conf is owned by uid 1000, should be 0</code></dt>
+<dd><code>pkexec chown root:root /etc/sudoers /etc/sudoers.d -R</code></dd>
+</dl>
+<h4 id="datei-paket-finden">Datei/ Paket finden</h4>
+<p><code>where is</code>+ Name</p>
+<h1 id="apache-webserver-installieren">Apache-Webserver installieren</h1>
+<p>lokalen Paketindex aktualisieren, um alle neuen Änderungen im Upstream widerzuspiegeln:
+<code>sudo apt update</code></p>
+<p>Apache2 installieren:
+<code>sudo apt install apache2</code></p>
+<h2 id="firewall-anpassen">Firewall anpassen</h2>
+<p>Anwendungsprofile auflisten lassen:
+<code>sudo ufw app list</code></p>
+<p>restriktivste Profil aktivieren:
+<code>sudo ufw allow 'Apache'</code></p>
+<p>Status anzeigen lassen:
+<code>sudo ufw status</code></p>
+<h2 id="webserver-testen">Webserver testen</h2>
+<p>Überprüfung ob Dienst ausgeführt wird: 
+<code>sudo systemctl status apache2</code></p>
+<p>Adressen anzeigen lassen, unter denen apache läuft:
+<code>hostname -I</code></p>
+<h2 id="verwalten-des-apache-prozesses">Verwalten des Apache-Prozesses</h2>
+<p>Webserver 
+stoppen:
+<code>sudo systemctl stop apache2</code></p>
+<p>starten:
+<code>sudo systemctl start apache2</code></p>
+<p>neustarten:
+<code>sudo systemctl restart apache2</code></p>
+<p>neuladen ohne Verbindung zu trennen:
+<code>sudo systemctl reload apache2</code></p>
+<p>kein automatischer Start beim Booten:
+<code>sudo systemctl disable apache2</code></p>
+<p>automatischer Start beim Booten:
+<code>sudo systemctl enable apache2</code></p>
+<h2 id="virtuelle-hosts-einrichten">Virtuelle Hosts einrichten</h2>
+<p>Verzeichnis erstellen:
+<code>sudo mkdir /var/www/wpenv</code></p>
+<p>Eigentum zuweisen:
+<code>sudo chown -R $USER:$USER /var/www/wpenv</code></p>
+<p>Berechtigungen - nur Eigentümer hat alle Berechtigungen, Gruppen und andere nur Lese- und Ausführungsberechtigungen
+<code>sudo chmod -R 755 /var/www/your_domain</code></p>
+<p>Neue Datei unter /etc/apache2/sites-available/wpenv.conf erstellen:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    &lt;VirtualHost *:80&gt;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        ServerAdmin webmaster@localhost
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        ServerName wpenv
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        ServerAlias www.wpenv
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        DocumentRoot /var/www/wpenv
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        ErrorLog ${APACHE_LOG_DIR}/error.log
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        CustomLog ${APACHE_LOG_DIR}/access.log combined
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    &lt;/VirtualHost&gt;
+</code></pre></div></p>
+<p>Aktivieren über Tool a2ensite:
+<code>sudo a2ensite your_domain.conf</code></p>
+<p>Deaktivieren der unter 000-default.conf definierten Standard-Site:
+<code>sudo a2dissite 000-default.conf</code></p>
+<p>Testen auf Konfigurationsfehler:
+<code>sudo apache2ctl configtest</code></p>
+<p>Apache neustarten:
+<code>sudo systemctl restart apache2</code></p>
+<h2 id="php-installieren">PHP installieren</h2>
+<p>PHP installieren:
+<code>sudo apt-get install libapache2-mod-php</code></p>
+<p>MySQL-Modul für PHP installieren:
+<code>sudo apt-get install php-mysql</code></p>
+<h2 id="mysql-installieren">MySQL installieren</h2>
+<p>MySQL-Server installieren:
+<code>sudo apt-get install mysql-server</code></p>
+<p>Sicherheit:
+<code>sudo mysql_secure_installation</code></p>
+<h2 id="datenbank-fur-wp-anlegen">Datenbank für WP anlegen</h2>
+<p>als root einloggen:
+<code>mysql -u root -p</code></p>
+<p>Datenbank anlegen:
+<code>create database wordpress;</code></p>
+<h2 id="ordner-on-the-fly-als-subdomain-nutzen">Ordner on the fly als Subdomain nutzen</h2>
+<p>hosts-file bearbeiten:
+<code>sudo nano /etc/hosts</code></p>
+<p>Domain festlegen:
+<code>127.0.0.1       localhost
+    127.0.0.1       dev.localhost</code></p>
+<h3 id="_1"></h3>
+<p>{{ macros_info() }}</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

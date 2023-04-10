@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Carina Arnold">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Funktionen - Webdevelopment Cheatsheet</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+        <link href="../../../stylesheets/css.css" rel="stylesheet">
+        <link href="../../../stylesheets/bootswatch.less" rel="stylesheet">
+        <link href="../../../stylesheets/variables.less" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Webdevelopment Cheatsheet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Database <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../database/allgemein/">Relationales Datenbanksystem (RDBS)</a>
+</li>
+                                    
+<li >
+    <a href="../../../database/befehle/">Befehle</a>
+</li>
+                                    
+<li >
+    <a href="../../../database/joins/">JOINS</a>
+</li>
+                                    
+<li >
+    <a href="../../../database/operatoren/">Operatoren</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Includes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../includes/abbreviations/">Abbreviations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informatik <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../informatik/Allgemeines/">Grundlagen der Informationstechnik</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../javascript/basics/">Output</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../linux/Rechte/">Rechte</a>
+</li>
+                                    
+<li >
+    <a href="../../../linux/basics/">Linux command basics</a>
+</li>
+                                    
+<li >
+    <a href="../../../linux/webserver_einrichten/">Webserver einrichten</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Php <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../php/datentypen/">PHP</a>
+</li>
+                                    
+<li >
+    <a href="../../../php/konfiguration/">php.ini</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../exception_handling/">Exception Handling</a>
+</li>
+                                    
+<li >
+    <a href="../../modules/">Modularisierung</a>
+</li>
+                                    
+<li >
+    <a href="../../oop/">OOP</a>
+</li>
+                                    
+<li >
+    <a href="../../virtual/">Virtuelle Umgebung erstellen</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../frameworks/create_django/">Django</a>
+</li>
+            
+<li >
+    <a href="../../frameworks/django/">Django</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Functions</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Funktionen</a>
+</li>
+            
+<li >
+    <a href="../functions_begriffe/">Begriffe</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../libraries/l_math/">Math</a>
+</li>
+            
+<li >
+    <a href="../../libraries/l_random/">L random</a>
+</li>
+            
+<li >
+    <a href="../../libraries/l_tkinter/">Tkinter</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../react/jsx/">JSX</a>
+</li>
+                                    
+<li >
+    <a href="../../../react/react/">React</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../frameworks/django/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../functions_begriffe/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#funktionen">Funktionen</a></li>
+            <li><a href="#parameter-reihenfolge">Parameter Reihenfolge</a></li>
+            <li><a href="#parameterdefinitionen">Parameterdefinitionen</a></li>
+            <li><a href="#namensraume">Namensräume</a></li>
+            <li><a href="#anonyme-funktion">Anonyme Funktion</a></li>
+            <li><a href="#annotationen">Annotationen</a></li>
+            <li><a href="#rekursion">Rekursion</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="funktionen">Funktionen</h1>
+<p>Funktionen können selber aus mehreren Bestandteilen bestehen:
+- Variablen
+- Datenstrukturen
+- If-Else-Struktur
+- Schleifenstrukturen
+- Eingaben
+- Dateiverarbeitung
+- Funktionen</p>
+<h2 id="parameter-reihenfolge">Parameter Reihenfolge</h2>
+<ul>
+<li>Positionsparameter  </li>
+<li>n-Parameter(Tupel)  </li>
+<li>Schlüsselwertparameter </li>
+<li>n-Parameter(Dictionary)</li>
+</ul>
+<p><img alt="Reihenfolge" src="../../img/kombi_parametertypen.png" />
+&nbsp;</p>
+<h2 id="parameterdefinitionen">Parameterdefinitionen</h2>
+<h3 id="positionsparameter">Positionsparameter</h3>
+<ul>
+<li>Die Parameter bei den Funktionen in der bisherigen Notation sind sog. 
+Positionsparameter</li>
+<li>Die Übertragung von Argumenten in der Funktionsschnittstelle ist durch die 
+Positionsparameter in einer definierten Reihenfolge</li>
+<li>Beispiel: math.pow(x, y) </li>
+<li>x ist der erste Positionsparameter (Basis der Potenz)</li>
+<li>y ist der zweite Positionsparameter (Exponent der Potenz)</li>
+<li>Bei eigenen Funktionen sind die Parameter ohne weitere Angaben Positionsparameter</li>
+<li>Positionsparameter sind obligatorisch für den Funktionsaufruf
+&nbsp;</li>
+</ul>
+<h3 id="optionale-parameter">optionale Parameter</h3>
+<ul>
+<li>Optionale Parameter werden in der Funktionsdefinition als Parameter 
+definiert, die optional sind</li>
+<li>Bei dem Funktionsaufruf müssen sie nicht (!) mit angegeben werden</li>
+<li>Sie werden mit 0 oder mit ““ oder mit None als Platzhalter angegeben</li>
+<li>Beispiel: def funktion(x, y=0, z=None)
+&nbsp;</li>
+</ul>
+<h3 id="schlusselwertparameter">Schlüsselwertparameter</h3>
+<ul>
+<li>Schlüsselwertparameter treten bei dem Funktionsaufruf auf</li>
+<li>Bei dem Funktionsaufruf werden die Parameternamen der Funktion explizit 
+aufgerufen</li>
+<li>Die Reihenfolge der Schlüsselwertparameter untereinander ist hierbei 
+irrelevant</li>
+<li>Beispiel: ergebnis = funktion(x=1,y=2)
+&nbsp;</li>
+</ul>
+<h3 id="beliebige-parameteranzahl-tupel">beliebige Parameteranzahl (Tupel)</h3>
+<ul>
+<li>In Python ist es möglich eine beliebige Parameteranzahl zu programmieren</li>
+<li>Die Datenstruktur in der beliebigen Parameteranzahl über * gespeichert 
+wird ist das Tupel</li>
+<li>Diese Parameteranzahl kann 0 bis n betragen</li>
+<li>Beispiel: def funktion(*parameter)
+&nbsp;</li>
+</ul>
+<h3 id="beliebige-parameteranzahl-dictionary">beliebige Parameteranzahl (Dictionary)</h3>
+<ul>
+<li>Die Datenstruktur in der beliebigen Parameteranzahl über ** 
+gespeichert wird ist das Dictionary</li>
+<li>Diese Parameteranzahl kann 0 bis n betragen</li>
+<li>Beispiel: funktion(**parameter)
+&nbsp;</li>
+</ul>
+<h3 id="reine-schlusselwertparameter">reine Schlüsselwertparameter</h3>
+<ul>
+<li>Die sog. reinen Schlüsselwertparameter treten in Kombination mit dem Parametertyp der beliebig viele Werte in einem Tupel speichert</li>
+<li>Jeder Parameter, der nach diesem Parametertyp gespeichert wird ist ein sog. 
+Schlüsselwertparameter</li>
+<li>Beispiel:
+def funktion(*a, rein_schl1, rein_schl2)</li>
+<li>Bei dem Funktionsaufruf müssen sie wie normale Schlüsselwertargumente aufgerufen werden</li>
+<li>Beispiel
+funktion(2, 3, 4, rein_schl1 = 10, rein_schl2 = 6)</li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="namensraume">Namensräume</h2>
+<p>Es gibt
+- globale Variablen/ Funktionen und
+- lokale Variablen/ Funktionen</p>
+<p>Die Namen der Variablen können identisch sein, da sie verschiedenen
+Namensräumen zugeordnet sind</p>
+<p>&nbsp;</p>
+<h3 id="lokale-referenz">Lokale Referenz</h3>
+<ul>
+<li>sobald eine Funktion und ihre lokale Variable die globalen Variable überschreiben will, entsteht
+dadurch eine sog. <strong>Lokale Referenz</strong></li>
+<li>Diese lokale Referenz kann die globale Variable nicht überschreiben</li>
+</ul>
+<p><code>global</code></p>
+<p>generiert einen Schreibzugriff auf eine globale Variable
+s
+<img alt="global" src="../../img/locale_function.png" /></p>
+<p><code>nonlocal</code></p>
+<p>kann auf lokale Variablen eines höheren Geltungsbereich zugreifen</p>
+<p><img alt="nonlocal" src="../../img/nonlocal.png" /></p>
+<p>&nbsp;</p>
+<h2 id="anonyme-funktion">Anonyme Funktion</h2>
+<ul>
+<li>besitzen keinen Funktionsnamen</li>
+<li>werden durch das Schlüsselwort lambda eingeleitet</li>
+<li>innerhalb von anderen Funktionsaufrufen können anonyme Funktionen als Parameter eingetragen werden</li>
+</ul>
+<p><code>lambda</code></p>
+<p>&nbsp;</p>
+<h2 id="annotationen">Annotationen</h2>
+<p>sind Anmerkungen, die bei einer Funktion angegeben werden können</p>
+<p><code>__annotations__</code></p>
+<p><img alt="Annotation" src="../../img/annotation.png" /></p>
+<p>&nbsp;</p>
+<h2 id="rekursion">Rekursion</h2>
+<p>ist eine Programmiertechnik, indem eine Funktion sich selbst ein oder mehrmals in ihrem Funktionskörper (body) aufruft</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

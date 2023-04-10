@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Carina Arnold">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Grundlagen der Informationstechnik - Webdevelopment Cheatsheet</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+        <link href="../../stylesheets/css.css" rel="stylesheet">
+        <link href="../../stylesheets/bootswatch.less" rel="stylesheet">
+        <link href="../../stylesheets/variables.less" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Webdevelopment Cheatsheet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Database <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../database/allgemein/">Relationales Datenbanksystem (RDBS)</a>
+</li>
+                                    
+<li >
+    <a href="../../database/befehle/">Befehle</a>
+</li>
+                                    
+<li >
+    <a href="../../database/joins/">JOINS</a>
+</li>
+                                    
+<li >
+    <a href="../../database/operatoren/">Operatoren</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Includes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../includes/abbreviations/">Abbreviations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informatik <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Grundlagen der Informationstechnik</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../javascript/basics/">Output</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../linux/Rechte/">Rechte</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/basics/">Linux command basics</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/webserver_einrichten/">Webserver einrichten</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Php <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../php/datentypen/">PHP</a>
+</li>
+                                    
+<li >
+    <a href="../../php/konfiguration/">php.ini</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/exception_handling/">Exception Handling</a>
+</li>
+                                    
+<li >
+    <a href="../../python/modules/">Modularisierung</a>
+</li>
+                                    
+<li >
+    <a href="../../python/oop/">OOP</a>
+</li>
+                                    
+<li >
+    <a href="../../python/virtual/">Virtuelle Umgebung erstellen</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/frameworks/create_django/">Django</a>
+</li>
+            
+<li >
+    <a href="../../python/frameworks/django/">Django</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Functions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/functions/functions/">Funktionen</a>
+</li>
+            
+<li >
+    <a href="../../python/functions/functions_begriffe/">Begriffe</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/libraries/l_math/">Math</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_random/">L random</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_tkinter/">Tkinter</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../react/jsx/">JSX</a>
+</li>
+                                    
+<li >
+    <a href="../../react/react/">React</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../includes/abbreviations/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../javascript/basics/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#grundlagen-der-informationstechnik">Grundlagen der Informationstechnik</a></li>
+            <li><a href="#begriffe">Begriffe</a></li>
+            <li><a href="#arten-von-programmiersprachen">Arten von Programmiersprachen</a></li>
+            <li><a href="#digitale-speicherung-und-verarbeitung-von-informationen">Digitale Speicherung und Verarbeitung von Informationen</a></li>
+            <li><a href="#_1"></a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="grundlagen-der-informationstechnik">Grundlagen der Informationstechnik</h1>
+<h2 id="begriffe">Begriffe</h2>
+<h3 id="datenverarbeitung">Datenverarbeitung</h3>
+<table>
+<tbody>
+<tr>
+<td>manuelle Datenverarbeitung</td>
+<td>f&uuml;hrt Berechnungen und Datenmanipulationen ohne Hilfsmittel durch, basiert auf Kopfrechnen und Auswendiglernen</td>
+</tr>
+<tr>
+<td>mechanische Datenverarbeitung</td>
+<td>verwendet mechanische Hilfsmittel, z.B. mechanische Schreibmaschine oder Rechenschieber</td>
+</tr>
+<tr>
+<td>elektrische Datenverarbeitung</td>
+<td>elektrisch betriebene Ger&auml;te werden als Hilfsmittel verwendet, z.B. elektrische Schreibmaschinen oder klassische Registrierkassen</td>
+</tr>
+<tr>
+<td>elektronische Datenverarbeitung</td>
+<td>verwendet elektronisch gesteuerte Arbeitsmittel, also Elektronenrechner oder Computer</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="informatik">Informatik</h3>
+<table>
+<tbody>
+<tr>
+<td>theoretische Informatik</td>
+<td>betrachet insbesondere die mathematisch-logischen Grundlagen, die der Verwendung und Proigrammierung von Computern zugrunde liegen; es geht bspw um die Berechenbarkeit und um Automatentheorien - die mathematisch-formalen Modelle, auf denen Rechner unabh&auml;ngig von der elektronischen Machbarkeit aufbauen;</td>
+</tr>
+<tr>
+<td>technische Informatik</td>
+<td>beschreibt die elektronisch-technischen Eigenschaften der Bauteile, aus denen Computer zusammengesetzt sind; ein wichtiges Teilgebiet der technischen Informatik ist die Schaltalgebra, die Umsetzung logischer Operationen durch elektronische Schaltungen;</td>
+</tr>
+<tr>
+<td>praktische Informatik</td>
+<td>hier geht es um Programmierung von Computern und die Mittel, die dazu erforderlich sind; die Erforschung des Aufbaus von Betriebssystemen und Programmiersprachen-Compilern sowie deren Implementierung (praktische Umsetzung) sind die wichtigsten Teilgebiete;</td>
+</tr>
+<tr>
+<td>angewandte Informatik</td>
+<td>k&uuml;mmert sich um alles andere, n&auml;mlich um s&auml;mtliche Nutzanwendungen von Computern; das reicht von Datenbanken&nbsp; &uuml;ber die Netzwerkkommunikation bis hin zu Grafik, Animation und Audio-&amp;/Videobearbeitung;</td>
+</tr>
+</tbody>
+</table>
+
+<p>Assembler:
+Name für vereinfachte Schreibweise der Maschinensprache und für das Programm selbst; beherrschen bspw  Definition sog. Makros: immer wiederkehrende Abfolgen von Befehlen erhalten einen eindeutigen Namen und können dann später unter diesem Namen aufgerufen werden; Assemblersprachen werden heute noch für direkte Hardware-Manipulation, Zugriff auf spezielle Prozessoranweisungen, Verwaltung von Konstanten, Verwaltung von Adressen von Befehlen / Daten oder zur Lösung kritischer Leistungsprobleme verwendet. Nach Assembler-Definition kann die Übersetzung also ganz zielgerecht an kritischen Stellen eingesetzt werden. Des Weiteren können Assembler zur Optimierung der Verarbeitungsgeschwindigkeit oder zur Optimierung der Programmgröße verwendet werden;</p>
+<p>Interpreter:
+übersetzt den Quellcode Zeile für Zeile; der Code wird also während der Ausführung (zur Laufzeit) übersetzt. Interpretierte Sprachen werden häufig auch als <em>Skriptsprachen</em> bezeichnet;</p>
+<p>Compiler: 
+rzeugt ein dauerhaft lauffähiges Maschinensprachprogramm und speichert es als ausführbares Programm ab;</p>
+<p>Just-in-Time-Compiler:
+übersetzen die Skriptsprache, bevor das Programm ausgeführ wird und der entstandene Byte-Code wird oftmals in einem Cache zwischengespeichert;</p>
+<p>Byte-Code: 
+kann als Programm auf unterschiedlicher Hardware ausgeführt werden;</p>
+<h2 id="arten-von-programmiersprachen">Arten von Programmiersprachen</h2>
+<h3 id="imperative-oder-prozedurale-programmiersprachen">imperative oder prozedurale Programmiersprachen</h3>
+<p>C oder Pascal; 
+erlauben eine Strukturierung/ Modularisierung</p>
+<h3 id="objektorientierte-programmiersprachen">objektorientierte Programmiersprachen</h3>
+<p>Smalltalk, C++, Java, C#;
+werden in wiederverwendbaren Paketen programmiert, den sogenannten Klassen;
+Eine Klasse ist eine allgemeine Vorlage für die Konstruktion von Objekten. Ein Objekt ist eine Datenstruktur, die selbst Funktionen enthält, um sich auf die gewünschte Art und Weise zu verhalten. </p>
+<h4 id="vorteile">Vorteile</h4>
+<ul>
+<li>Kapselung:
+    Datenstrukturen außerhalb eines Objekts können nicht direkt dessen innere Daten manipulieren, sondern nur seine offiziellen Methoden (Schnittstellen nach außen) benutzen. Dies sorgt für ein klares Programmdesign und schützt vor vielen Fehlern. </li>
+<li>Vererbung: 
+    Klassen können ihre Eigenschaften und Methoden an "Kindklassen" abgeben, in denen nur noch die Unterschiede programmiert werden müssen. Dies beschleunigt die Softwareentwicklung und macht Programme noch einmal erheblich übersichtlicher. </li>
+</ul>
+<h4 id="die-wichtigsten-oops">Die wichtigsten OOPS</h4>
+<ul>
+<li>
+<p>Smalltalk: 
+    war die erste vollständig objektorientierte Sprache überhaupt. Sie wurde in den 70er-Jahren zur Programmierung der ersten grafischen Benutzeroberfläche entwickelt.</p>
+</li>
+<li>
+<p>C++:
+    ist die objektorientierte Erweiterung der Programmiersprache C und wurde von Bjarne Stroustrup entwickelt. Da C++ abwärtskompatibel mit C ist, wurde die Sprache bald von C-Programmierern eingesetzt; ihre besonderen Vorteile als objektorientierte Sprache wurden aber erst langsam angenommen.</p>
+</li>
+<li>
+<p>Java:
+    besitzt vor allem die Besonderheit, dass es sich um eine plattformunabhängige Sprache handelt. Sie brauchen ein Java-Programm nur einmal zu kompilieren, es läuft innerhalb eines speziellen Programms für die verschiedenen Plattformen, der virtuellen Java-Maschine (JVM).</p>
+</li>
+<li>
+<p>C#: 
+    ist eine OOPS von Microsoft. Es handelt sich um eine der Sprachen, mit denen Anwendungen für das .NET Framework entwickelt werden können. Zwar betont Microsoft aus Marketingerwägungen stets die Verwandtschaft mit C++, aber dennoch hat C# mehr mit Java gemeinsam als mt C++.</p>
+</li>
+</ul>
+<h3 id="logische-programmiersprachen">Logische Programmiersprachen</h3>
+<p>LISP, Prolog, Logo;</p>
+<p>Die Grundidee besteht darin, nicht den fertigen Algorithmus einzutippen und mit wechselnden Wertbelegungen vom Computer berechnen zu lassen, sondern das Grundproblem selbst zu formulieren und die Erzeugung einer möglichst optimalen Lösung dem Compiler zu überlassen. 
+Logische Programmierung ist ein Programmierparadigma, das auf der mathematischen Logik beruht.
+Logische Sprachen verwenden die <em>Prädikatenlogik</em> zur Formulierung von Ausdrücken oder Termen; der wichtigste Vertreter ist Prolog. </p>
+<h4 id="funktionale-sprachen">Funktionale Sprachen</h4>
+<p>Sprachen mit ähnlichem Ansatz, aber anderer Syntax werden auch als <em>funktionale Sprachen</em> bezeichnet. Dazu gehört vor allem LISP, aber auch die Sprache Logo, die hauptsächlich entworfen wurde, um Kindern die Denkweise der Computerprogrammierung beizubringen. Als gemeinsamen Oberbegriff verwendet man manchmal die Bezeichnung <em>deklarative Programmiersprachen</em>. </p>
+<h4 id="multiparadigmen-sprache">Multiparadigmen-Sprache</h4>
+<p>Ruby, Python;</p>
+<p>enthält neben funktionalen auch objektorientierte und imperative Aspekte;</p>
+<h2 id="digitale-speicherung-und-verarbeitung-von-informationen">Digitale Speicherung und Verarbeitung von Informationen</h2>
+<p>Digital sind Informationen immer dann, wenn sie in Form von Zahlen dargestellt werden können. </p>
+<p>Genauer gesagt, werden die Daten <em>binär</em> gespeichert, also als Abfolge von Einsen und Nullen. Das ist nicht genau dasselbe wie <em>dual</em>. Das Dualsystem ist das mathematische Zweiersystem, während binär allgemein die Speicherung beliebiger Daten durch zwei verschiedene Zustände bezeichnet. </p>
+<p>Analogdaten werden als Welle dargestellt, digitale Daten dagegen durch eine rechteckige Form. </p>
+<p><img alt="analog/digital" src="../img/analog-digital.jpg" /></p>
+<p>In der Mathematik werden Objekte mit einem solchen "Mindestabstand" als <em>diskrete Mengen</em> bezeichnet. Ein Alltagsbeispiel ist die Folge der ganzen Zahlen - im Unterschied zu den rationalen oder gar reellen Zahlen, bei denen zwischen zwei beliebigen Elementen immer noch unendlich viele Zwischenwerte liegen. </p>
+<p>Die Umwandlung der analogen Eindrücke aus der Realität in computergeeignete digitale Daten wird als "Digitalisierung" bezeichnet. Je nach Datenart wird sie zum Beispiel von einem Scanner oder einer Digitalkamera bei Bildern oder von einer Soundkarte bei Tönen durchgeführt. </p>
+<h3 id="digitale-bilddaten">Digitale Bilddaten</h3>
+<h4 id="pixelgrafik">Pixelgrafik</h4>
+<p>auch Bitmap-Grafik genannt, speichert ein Bild als rechteckiges Raster quadratischer Farbinformationen ab, den sogenannten Pixeln. </p>
+<h4 id="vektorgrafik">Vektorgrafik</h4>
+<p>speichert Umrisslinien und Kurven von Zeichnungen in Form mathematischer Formeln. </p>
+<p><img alt="Pixel/Vektor" src="../img/pixel-vektor.jpg" /></p>
+<h4 id="charakter-eines-pixelbildes">Charakter eines Pixelbildes</h4>
+<h5 id="auflosung">Auflösung</h5>
+<p>ppi - Pixel per inch; 
+Für Druck sollte die Auflösungen etwa 300 ppi haben, für eine digitale Anzeige ca. 72 ppi;</p>
+<h5 id="farbtiefe">Farbtiefe</h5>
+<p>Wie viele Bits werden zur Speicherung der Informationen eines Pixels verwendet. Je nach Farbtiefe kann eine bestimmte Anzahl verschiedener Farben eingesetzt werden. Beispielsweise ermöglicht eine Farbtiefe von 8 Bit nur 256 verschiedene Farben, 16 Bit bieten 65.536 Farben und 24 Bit sogar mehr als 16,7 Millionen. </p>
+<h5 id="farbkanale">Farbkanäle</h5>
+<ul>
+<li>additive Farbmischung (RGB)</li>
+<li>subtraktive Mischung (CMYK)
+Für die Intensität jeder einzelnen Grundfarbe wird ein Farbkanal gespeichert. Die Farbtiefe wird dann pro Kanal angegeben, bei einem RGB-Bild mit 24 Bit Farbtiefe also beispielsweise 8 Bit (oder 256 Intensitätsstufen) pro Kanal. </li>
+</ul>
+<h2 id="_1"></h2></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

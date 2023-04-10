@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Carina Arnold">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Django - Webdevelopment Cheatsheet</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+        <link href="../../../stylesheets/css.css" rel="stylesheet">
+        <link href="../../../stylesheets/bootswatch.less" rel="stylesheet">
+        <link href="../../../stylesheets/variables.less" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Webdevelopment Cheatsheet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Database <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../database/allgemein/">Relationales Datenbanksystem (RDBS)</a>
+</li>
+                                    
+<li >
+    <a href="../../../database/befehle/">Befehle</a>
+</li>
+                                    
+<li >
+    <a href="../../../database/joins/">JOINS</a>
+</li>
+                                    
+<li >
+    <a href="../../../database/operatoren/">Operatoren</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Includes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../includes/abbreviations/">Abbreviations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informatik <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../informatik/Allgemeines/">Grundlagen der Informationstechnik</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../javascript/basics/">Output</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../linux/Rechte/">Rechte</a>
+</li>
+                                    
+<li >
+    <a href="../../../linux/basics/">Linux command basics</a>
+</li>
+                                    
+<li >
+    <a href="../../../linux/webserver_einrichten/">Webserver einrichten</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Php <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../php/datentypen/">PHP</a>
+</li>
+                                    
+<li >
+    <a href="../../../php/konfiguration/">php.ini</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../exception_handling/">Exception Handling</a>
+</li>
+                                    
+<li >
+    <a href="../../modules/">Modularisierung</a>
+</li>
+                                    
+<li >
+    <a href="../../oop/">OOP</a>
+</li>
+                                    
+<li >
+    <a href="../../virtual/">Virtuelle Umgebung erstellen</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Django</a>
+</li>
+            
+<li >
+    <a href="../django/">Django</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Functions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../functions/functions/">Funktionen</a>
+</li>
+            
+<li >
+    <a href="../../functions/functions_begriffe/">Begriffe</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../libraries/l_math/">Math</a>
+</li>
+            
+<li >
+    <a href="../../libraries/l_random/">L random</a>
+</li>
+            
+<li >
+    <a href="../../libraries/l_tkinter/">Tkinter</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../react/jsx/">JSX</a>
+</li>
+                                    
+<li >
+    <a href="../../../react/react/">React</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../virtual/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../django/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#django">Django</a></li>
+        <li class="main "><a href="#create-et-access-project-folder">Create et access project folder</a></li>
+        <li class="main "><a href="#create-python-virtual-env">Create Python virtual env</a></li>
+        <li class="main "><a href="#activate-virtual-env">Activate virtual env</a></li>
+        <li class="main "><a href="#if-you-want-to-deactivate-virtual-env">If you want to deactivate virtual env</a></li>
+        <li class="main "><a href="#install-django-same-as-31">Install django (~= same as 3.1.*)</a></li>
+        <li class="main "><a href="#new-django-project-from-project_name-folder">New django project (from project_name folder)</a></li>
+        <li class="main "><a href="#create-app-from-project_name-folder">Create app (from project_name folder)</a></li>
+        <li class="main "><a href="#create-a-requirements-file-that-contain-all-your-projet-dependencies">Create a requirements file that contain all your projet dependencies</a></li>
+        <li class="main "><a href="#install-your-project-requirements-if-a-requirements-file-exist">Install your project requirements (if a requirements file exist)</a></li>
+        <li class="main "><a href="#django-shell-run-projet-code-direclty">Django shell (Run projet code direclty)</a></li>
+        <li class="main "><a href="#example-of-code-to-run-in-the-shell">example of code to run in the shell:</a></li>
+        <li class="main "><a href="#prepare-static-folders-for-production">Prepare static folders for production</a></li>
+        <li class="main "><a href="#take-all-data-from-app-blog-and-export-in-json">Take all data from app blog and export in json</a></li>
+        <li class="main "><a href="#take-all-data-in-json-file-and-import-in-app-data-table">Take all data in json file and import in app data table</a></li>
+        <li class="main "><a href="#add-app-to-settingspy">Add app to settings.py</a></li>
+        <li class="main "><a href="#app-templates-folder">App templates folder</a></li>
+        <li class="main "><a href="#project-templates-folder">Project templates folder:</a></li>
+        <li class="main "><a href="#settingspy-template-config">settings.py template config</a></li>
+        <li class="main "><a href="#create-static-folder">Create Static folder:</a></li>
+        <li class="main "><a href="#static-folder-settingspy">Static folder (settings.py):</a></li>
+        <li class="main "><a href="#to-use-postgressql">To use PostgresSQL</a></li>
+        <li class="main "><a href="#pip-install-psycopg2">pip install psycopg2</a></li>
+        <li class="main "><a href="#settingspy">settings.py</a></li>
+        <li class="main "><a href="#modelspy">models.py</a></li>
+        <li class="main "><a href="#the-id-fields-is-automaticly-created-by-django-for-each-model-that-why-its-not-show-below">The id fields is automaticly created by Django for each model that why it's not show below</a></li>
+        <li class="main "><a href="#one-to-many-use-double-quotes-if-the-entity-is-not-yet-declare-ex-supplier">One-to-Many: (use double quotes if the entity is not yet declare) ex. "Supplier"</a></li>
+        <li class="main "><a href="#on_delete-can-be-set-to-modelscascade-modelsst_default-or-modelsset_null">on_delete can be set to models.CASCADE, models.ST_DEFAULT or models.SET_NULL</a></li>
+        <li class="main "><a href="#many-to-many">Many-to-Many:</a></li>
+        <li class="main "><a href="#one-to-one">One to One</a></li>
+        <li class="main "><a href="#overwrite-save-method">Overwrite save method</a></li>
+        <li class="main "><a href="#custom-model-admin-adminpy">Custom model Admin (admin.py):</a></li>
+        <li class="main "><a href="#register-app">Register app</a></li>
+        <li class="main "><a href="#viewspy">views.py</a></li>
+        <li class="main "><a href="#urlspy-route-declaration">Urls.py route declaration</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="django">Django</h1>
+<p><code>https://www.codewithharry.com/blogpost/django-cheatsheet/</code></p>
+<p>Start a new Django project</p>
+<h1 id="create-et-access-project-folder">Create et access project folder</h1>
+<blockquote>
+<p>mkdir project_name
+ cd project_name</p>
+</blockquote>
+<h1 id="create-python-virtual-env">Create Python virtual env</h1>
+<blockquote>
+<p>python3 -m venv venv</p>
+</blockquote>
+<h1 id="activate-virtual-env">Activate virtual env</h1>
+<blockquote>
+<p>source venv/bin/activate</p>
+</blockquote>
+<h1 id="if-you-want-to-deactivate-virtual-env">If you want to deactivate virtual env</h1>
+<blockquote></blockquote>
+<h1 id="install-django-same-as-31">Install django (~= same as 3.1.*)</h1>
+<blockquote>
+<p>pip install django~=3.1.0 </p>
+</blockquote>
+<h1 id="new-django-project-from-project_name-folder">New django project (from project_name folder)</h1>
+<blockquote>
+<p>django-admin startproject config .</p>
+</blockquote>
+<h1 id="create-app-from-project_name-folder">Create app (from project_name folder)</h1>
+<blockquote>
+<p>python manage.py startapp app_name
+Migration:
+Django create a database table for each models present in your app using thoses commands:</p>
+</blockquote>
+<p>Makemigrations: Create a file under app_name/migrations with the database structure to create</p>
+<blockquote>
+<p>python manage.py makemigrations 
+Migrate: Will read the migrations files and create the actual database and tables
+ python manage.py migrate
+Create superuser for authenficiation/admin panel
+ python manage.py createsuperuser
+Start server
+ python manage.py runserver  =&gt; ex.  http://127.0.0.1:8000
+Requirements</p>
+</blockquote>
+<h1 id="create-a-requirements-file-that-contain-all-your-projet-dependencies">Create a requirements file that contain all your projet dependencies</h1>
+<blockquote>
+<p>pip freeze &gt; requirements.txt</p>
+</blockquote>
+<h1 id="install-your-project-requirements-if-a-requirements-file-exist">Install your project requirements (if a requirements file exist)</h1>
+<blockquote>
+<p>pip install -r requirements.txt
+Other commands</p>
+</blockquote>
+<h1 id="django-shell-run-projet-code-direclty">Django shell (Run projet code direclty)</h1>
+<blockquote>
+<p>python manage.py shell</p>
+</blockquote>
+<h1 id="example-of-code-to-run-in-the-shell">example of code to run in the shell:</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>from app_name.models import User
+user1 = User.objects.first()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="prepare-static-folders-for-production">Prepare static folders for production</h1>
+<p>$ python manage.py collectstatic</p>
+<h1 id="take-all-data-from-app-blog-and-export-in-json">Take all data from app blog and export in json</h1>
+<p>python manage.py dumpdata blog &gt;myapp.json</p>
+<h1 id="take-all-data-in-json-file-and-import-in-app-data-table">Take all data in json file and import in app data table</h1>
+<p>python manage.py loaddata myapp.json</p>
+<p>Project config</p>
+<h1 id="add-app-to-settingspy">Add app to settings.py</h1>
+<p>INSTALLED_APPS = [ … , 'app_name' ]</p>
+<h1 id="app-templates-folder">App templates folder</h1>
+<p>create folder appfolder/templates/appname</p>
+<h1 id="project-templates-folder">Project templates folder:</h1>
+<p>create folder projectname/templates</p>
+<h1 id="settingspy-template-config">settings.py template config</h1>
+<p>Project templates settings.py: 
+    TEMPLATES = [
+        { …
+                'DIRS': [BASE_DIR / 'templates', ],
+        … }</p>
+<h1 id="create-static-folder">Create Static folder:</h1>
+<p>project_name\static\</p>
+<h1 id="static-folder-settingspy">Static folder (settings.py):</h1>
+<p>STATIC_URL = '/static/'
+STATICFILES_DIRS = [ BASE_DIR / 'static' ] 
+STATIC_ROOT = 'static_root'</p>
+<h1 id="to-use-postgressql">To use PostgresSQL</h1>
+<h1 id="pip-install-psycopg2">pip install psycopg2</h1>
+<h1 id="settingspy">settings.py</h1>
+<p>DATABASE = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog',
+        'USER': 'admin',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '5432'
+Create data model:
+Theses models can be created as database tables with the migrations commands</p>
+<h1 id="modelspy">models.py</h1>
+<h1 id="the-id-fields-is-automaticly-created-by-django-for-each-model-that-why-its-not-show-below">The id fields is automaticly created by Django for each model that why it's not show below</h1>
+<p>from django.db import models</p>
+<p>class Customer(models.Model)
+    name = models.Charfield('Customer', max_length=120)
+    age = models.IntegerField()
+    note = models.TextField(blank=True, null = True)
+    email = models.EmailField(max_length=255, blank=True, null=True)
+    credit = models.FloatField(blank=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)</p>
+<div class="highlight"><pre><span></span><code># Select Field (return value, display value)
+TYPE_CHOICES = (
+    (&#39;Customer&#39;, &#39;Customer&#39;),
+    (&#39;Supplier&#39;, &#39;Supplier&#39;),
+    (&#39;Student&#39;, &#39;Student&#39;),
+)
+
+type = models.CharField(choices=TYPE_CHOICES)
+</code></pre></div>
+<p>Model string representation
+class Customer(models.Model):
+    name = models.Charfield('Customer', max_length=120)
+    age = models.IntegerField()</p>
+<div class="highlight"><pre><span></span><code>def __str__(self): 
+    return self.name
+</code></pre></div>
+<p>Relationship between models</p>
+<h1 id="one-to-many-use-double-quotes-if-the-entity-is-not-yet-declare-ex-supplier">One-to-Many: (use double quotes if the entity is not yet declare) ex. "Supplier"</h1>
+<p>supplier = models.ForeignKey(Supplier, blank=True, null=True, on_delete=models.CASCADE)</p>
+<h1 id="on_delete-can-be-set-to-modelscascade-modelsst_default-or-modelsset_null">on_delete can be set to models.CASCADE, models.ST_DEFAULT or models.SET_NULL</h1>
+<h1 id="many-to-many">Many-to-Many:</h1>
+<p>tags = models.ManyToManyField(Tag, blank=True)</p>
+<h1 id="one-to-one">One to One</h1>
+<p>User = models.OneToOneField(User, on_delete=models.CASCADE)</p>
+<h1 id="overwrite-save-method">Overwrite save method</h1>
+<p>def save(self, (<em>args, </em>*kwargs):
+    if not self.slug:
+        self.slug = slugify(self.title)</p>
+<div class="highlight"><pre><span></span><code>super().save(*args, **kwargs)
+</code></pre></div>
+<p>Admin panel:
+Every Django projects come with an Admin Panel that can be open at /admin url (ex: localhost:8000/admin)</p>
+<p>To display the model in the Admin panel register the model in the app_name/admin.py file
+from .models import Blog
+admin.site.register(Blog)
+Customize Admin Panel</p>
+<p>For each models you can specify the fields you want to use</p>
+<h1 id="custom-model-admin-adminpy">Custom model Admin (admin.py):</h1>
+<p>class BlogAdmin(admin.ModelAdmin)
+    fields = ("title", "description") # Fields to use for add/edit/show page
+    list_display = ("title", "description") # fields to display in search page
+    list_display_links = ("title") # fields that will be a link in search page
+    ordering("date_created",) # Ordering allowed in the search page
+    search_fields("title", "description") # Search fields allowed in the search page</p>
+<h1 id="register-app">Register app</h1>
+<p>admin.site.register(Blog, BlogAdmin)
+Routing:
+Django routing info is store in project_folder/urls.py file
+from django.contrib import admin
+from django.urls import path, include</p>
+<p>urlpatterns = [
+    path('admin/', admin.site.urls), # pre-created admin urls routes
+    path('', include('app_name.urls')) # include your app urls
+]
+the 'include()' method allow to link another urls.py file created in your app folder (app_name/urls.py)
+from django.urls import path
+from . import views</p>
+<p>url patterns = [ 
+    path('posts', views.index, name='posts.index'),
+    path('posts/create/', views.create, name='posts.create',
+    path('posts/<int:id>/', views.show, name='posts.show'),
+    path('posts/<int:id>/edit/', views.edit, name='posts.edit'),
+    path('posts/<int:id>/delete/', views.delete, name='posts.delete'),
+] 
+Static route
+from django.conf import settings
+from django.conf.urls.static import static</p>
+<p>urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+Function Based Views</p>
+<h1 id="viewspy">views.py</h1>
+<p>from django.shortcuts import render, redirect
+from .models import Post
+from .forms import PostForm</p>
+<p>def index(request):
+    # Get all Posts
+    posts = Post.objects.all()</p>
+<div class="highlight"><pre><span></span><code># Render app template with context
+return render(request, &#39;appfolder/index.html&#39;, {&#39;posts&#39;: posts})
+</code></pre></div>
+<p>def show(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'appfolder/show.html', {'post': post})</p>
+<p>def create(request):
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        # optionally we can access form data with form.cleaned_data['first_name']
+        post = form.save(commit=False)
+        post.user = request.user
+        post.save()
+        return redirect('/posts')</p>
+<div class="highlight"><pre><span></span><code>return render(request, &#39;appfolder/create.html&#39;, {&#39;form&#39;: form)
+</code></pre></div>
+<p>def edit(request, id):
+    post = Post.objects.get(id=id)
+    form = PostForm(request.POST or None, instance=post)
+    if form.is_valid():
+        form.save()
+        return redirect('/posts')</p>
+<div class="highlight"><pre><span></span><code>return render(request, &#39;appfolder/edit.html&#39;, {&#39;form&#39;: form)
+</code></pre></div>
+<p>def delete(request, id):
+    post = Post.objects.get(id=id)
+    post.delete()
+    return redirect('/posts')
+Class based Views
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView</p>
+<p>class LandingPageView(TemplateView):
+    template_name = 'landing.html'</p>
+<div class="highlight"><pre><span></span><code># Optional: Change context data dict
+def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context[&#39;title&#39;] = &#39;Landing Page&#39;
+    return context
+</code></pre></div>
+<p>class PostsListView(ListView):
+    queryset = Post.objects.all()</p>
+<p># Optional
+    # context_object_name = "posts" (default: post_list)
+    # template_name = 'posts.html' (default: posts/post_list.html) </p>
+<p>class PostsDetailView(DetailView):
+    model = Post # object var in template</p>
+<p># Optional
+    # template_name = 'post.html' (default: posts/post_detail.html)</p>
+<p>class PostsCreateView(CreateView):
+    form_class = PostForm</p>
+<div class="highlight"><pre><span></span><code>template_name = &#39;posts/post_create.html&#39; # no default value
+
+def get_success_url(self):
+    return reverse(&#39;posts-list&#39;)
+
+# Optional: Overwrite form data (before save)
+def form_valid(self, form):
+    if self.request.user.is_authenticated:
+        from.instance.author = self.request.user
+
+    return super().form_valid(form)
+</code></pre></div>
+<p>class PostsUpdateView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'posts/post_update.html'</p>
+<div class="highlight"><pre><span></span><code>def get_success_url(self):
+    return reverse(&#39;post-list&#39;)
+
+# Optional: Change context data dict
+def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context[&#39;submit_text&#39;] = &#39;Update&#39;
+    return context
+</code></pre></div>
+<p>class PostsDeleteView(DeleteView):
+    model = Post
+    template_name = 'posts/post_delete.html'
+    success_url = reverse_lazy('posts-list')</p>
+<h1 id="urlspy-route-declaration">Urls.py route declaration</h1>
+<p _="%" endblock="endblock">path('<int:pk>/update/', PostsUpdateView.as_view(), name='post-update')
+Django Template:
+Templates are store in project_folder/templates or in your app_folder/templates/app_name/*.html
+{% extends 'base.html' %}
+{% block content %}   <br /></p>
+<p>{% include 'header.html' %} </p>
+<p _="%" endif="endif">{% if user.username = 'Mike' %}
+    <p>Hello Admin</p> <br />
+{% else %} <br />
+    <p>Hello User</p></p>
+<p>{% for product in products %} <br />
+<br />
+<p>The product name is {{ product }}<p>
+{% endfor %} 
+
+{{ var_name }}
+
+Template variables formating
+{{ title | lower }} 
+{{ blog.post | truncatwords:50 }}
+{{ order.date | date:"D M Y" }}
+{{ list_items | slice:":3" }}
+{{ total | default:"nil" }}
+
+Current path (ex. posts/1/show)
+{{ request.path }}   
+
+URL by name with param
+{% url 'posts.delete' id=post.id %}
+
+Use static in template: 
+{% load static %}
+{% static 'css/main.css' %} 
+Model Managers and Querysets:
+Model manager allow model database reads and writes
+
+# One line create and save
+Article.objects.create(name='Item 1', price=19.95) 
+
+# Read all
+Article.objects.all()
+
+# Create
+user = User.objects.first()
+article = Article(user=user, name='Item 1', price=19.95)
+
+# Save
+article.save()
+
+# Read one
+Article.objects.get(id=1) 
+
+# Select Related (to avoid n+1 query)
+posts = Post.objects.select_related('user', 'category').all()
+
+# Read or render a 404 not found page
+from django.shortcuts import get_object_or_404
+article = get_object_or_404(Article, id=512)
+
+# Filter 
+Article.objects.filter(model='dyson', name__icontains='dyson') # __icontains    
+Article.objects.filter(year__gt=2016) # __gt = greater than 
+Article.objects.filter(year__lt=2001) # __lt = less than 
+
+# Filter on relationship sub model field
+Article.objects.get(user__username='mike')
+
+# Ordering 
+Article.objects.order_by('name')     # ascending
+Article.objects.order_by('-name')   # descending
+
+# Slicing return first
+Article.objects.all().order_by('name')[0]
+
+# Slicing return last
+Article.objects.all().order_by('-name')[0]
+
+# Slicing limit/offset
+Article.objects.all().order_by('name')[1..10]
+
+# Updating
+article = Article.objects.first()
+article.name = 'new name'
+article.save()
+
+# One line update
+Article.objects.filter(id=4).update(name='new name')
+
+# Deleting
+article = Article.objects.first()
+article.delete()
+
+# One line delete
+article.objects.get(id=1).delete()
+
+# Delete all
+Article.objects.all().delete()
+
+# Set ForeignKey field value
+model1 = Model(name='dyson')
+article.model = model1
+
+# Get ForeignKey value
+article1.model.name
+model1.article_set.all()
+
+# Add Many-to-Many
+article1.tags.add(tag1) 
+article1.tags.all()
+tag1.articles_set.all()
+Form (forms.py)
+from django import forms
+class ArticleForm(forms.Form): 
+    name = forms.Charfield(max_length=100)
+    description = forms.Charfield(blank=True, null = True)
+
+
+# Model Form 
+from django.forms import ModelForm
+from .models import Article
+class ArticleForm(ModelForm):
+    class Meta:
+        model = Article
+        fields = ['name', 'description', 'price'] # Use '__all__' for all fields
+
+
+# Render form in template
+<form method=“post” action=“” novalidate> 
+    {% csrf_token %}
+    {{ form }} 
+    <button type="submit">Submit</button>
+</form>
+
+# Bootstrap (pip install django-crispy-forms + installed_apps: 'crispy_forms')
+{% load crispy_forms_tags %}
+{{ form|crispy }}
+{{ form.email|as_crispy_field }}
+
+# crispy-tailwind
+pip install crispy-tailwind
+
+# settings.py
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
+CRISPY_TEMPLATE_PACK = 'tailwind'
+
+# template usage
+{% load tailwind_filters %}
+{{ form|crispy}}
+Form validation
+# forms.py
+from django.core.exceptions import ValidationError
+
+# field validation 
+def clean_first_name(self):
+    data = self.cleaned_data['first_name']
+    if data = 'Mike':
+        raise ValidationError('Your name must not be Mike')
+
+    return data
+
+# form validation 
+def clean(self):
+    first_name = self.cleaned_data['first_name']
+    last_name = self.cleaned_data['last_name']
+    if first_name + last_name = 'MikeTaylor':
+        raise ValidationError('Your name must not be Mike Taylor')
+Flash messages
+messages.success(request, 'Login successful')
+messages.error(request, 'Login error')
+
+# Message tags
+# debug, info, success, warning and error
+
+# Display flash in template 
+{% if messages %} 
+    {% for message in messages %} 
+        {% message %} 
+        {% message.tags %}
+User model (pre-created)
+# Get a reference to Django pre-created User model
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
+# Or if you want to custom user model
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser): 
+    # add custom fields and methods
+
+# To make Django use that model go to settings.py and add: AUTH_USER_MODEL = 'app_name.User'
+Authentification: LoginView
+# LoginView is already pre-created by Django
+from django.contrib.auth.views import LoginView
+
+# Add a url to reach that view
+path('login/', LoginView.as_view(), name='login')
+
+# By default the LoginView will try to open a template name 'registration/login.html' and send a login form with it.
+
+# Create a template under registration/login.html
+{% extends "base.html" %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Login</button>
+    </form>
+{% endblock content %}
+
+# When user click the Login button, the LoginView will try to authenticate the user with the form username ans password. 
+
+# If successful il will then login the user and redirect to LOGIN_REDIRECT_URL specified in your settings.py 
+Authentification: LogoutView
+# LogoutView is already pre-created by Django
+from django.contrib.auth.views import LogoutView
+
+# Add a url to reach that view
+path('logout/', LoginView.as_view(), name='logout')
+
+# Include a link in a template
+<a> href="{% url 'logout' %}">Logout</a>
+
+# After link is execute, the user will be logout and redirect to LOGOUT_REDIRECT_URL specified in your settings.py 
+Authentification: SignupView
+# Create a SignupView (that view is not created by default)
+# import sinupview form pre-created by Django
+from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import CreateView
+
+class SignupView(CreateView):
+    template_name = 'registration/signup.html'
+    form_class = UserCreationForm
+
+    def get_success_url(self):
+        return reverse("login")
+
+
+# Create template: registration/signup.html
+{% extends "base.html" %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Signup</button>
+    </form>
+{% endblock content %}
+
+# Add a url to reach that view
+from posts.views import SignupView
+
+path('signup/', SignupView.as_view(), name='signup')
+
+# Optional: Customize the UserCreationForm
+# (forms.py)
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm
+
+User = get_user_model()
+class CustomUserCreationForm(UserCreattionForm):
+    class Meta:
+        model = User
+        fields = ['username']
+        fields_classes = {'username': UsernameField}
+Optional pre-created authentification routes
+# urls.py
+urlpatterns += path('', include('django.contrib.auth.urls'))
+# /login, /lougout, /signup, etc. 
+Template Authentification helpers
+# Authentication links
+<a href="{% url 'login' %}">Login</a>
+<a href="{% url 'signup' %}">Signup</a>
+<a href="{% url 'logout' %}">Logout</a>
+
+# Check if user login
+{% if request.user.is_authenticated %}
+    Logged in as: {{ request.user.username }}
+{% endif %}
+Authorization: LoginRequiredMixin and login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+# Restrict views to auth user only (views.py)
+class PostsCreateView(LoginRequiredMixin, generic.CreateView):
+    ...
+    ...
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required(login_url='/login')
+def search_page(request):
+    ...
+    ...
+Manual Authentification, Login and Logout
+from django.contrib.auth import authenticate, login
+
+def login_page(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("index")
+
+return render(request, "registration/login.html", {})
+
+
+def logout_page(request):
+    logout(request)
+    return redirect("index")
+User Change password
+# set_password will hash the password
+user.set_password('raw password')
+Send Email
+# settings.py
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# Send email function
+from django.core.email import send_mail
+
+send_mail(
+    subject = "A new post has been created",
+    messsage = "Go to the web site to see the detail",
+    from_email = "test@test.com",
+    recipient_list = ["test2@text.com"]
+)
+Signals
+# models.py
+from django.db.models.signals import post_save, pre_save
+
+def post_user_created_signal(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)
+
+
+# Launch the post_user_create_singal method if User model is save
+post_save.connect(post_user_created_signal, sender=User)
+Seed
+from .models import Product, Category
+from django.shortcuts import HttpResponse
+from faker import Faker
+
+
+def seed(request):
+    Product.objects.all().delete()
+    Category.objects.all().delete()
+
+    category = Category()
+    category.name = "Sports"
+    category.save()
+
+    category = Category()
+    category.name = "Home"
+    category.save()
+
+    fake = Faker()
+    for _ in range(100):
+        product = Product()
+        product.name = fake.unique.word()
+        product.short_description = fake.sentence()
+        product.main_picture = fake.image_url()
+        product.price = fake.random_digit() * 10
+        product.category =  Category.objects.order_by('?').first()
+        product.save()
+
+    return HttpResponse('Seeded')
+.env key/value file
+$ pip install django-dotenv
+add code to manage.py file
+import dotenv
+
+def main():
+    """Run administrative tasks."""
+    dotenv.read_dotenv() #add this line
+    ...
+    ...
+Create a file name '.env' in the root folder of your project
+SECRET_KEY = 'your secret key'
+ALLOWED_HOST=127.0.0.1
+In settings.py change security related settings to point to the .env file
+import os
+SECRET_KEY = os.environ.get('SECRET_KEY')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
+
+# Create et access project folder
+>  mkdir project_name
+>  cd project_name
+
+# Create Python virtual env 
+>  python3 -m venv venv
+
+# Activate virtual env
+>  source venv/bin/activate
+
+# If you want to deactivate virtual env
+>  deactivate
+
+# Install django (~= same as 3.1.*)
+>  pip install django~=3.1.0 
+
+# New django project (from project_name folder)
+>  django-admin startproject config .
+
+# Create app (from project_name folder)
+>  python manage.py startapp app_name
+
+
+*[scalar-type]: int, float, string, bool
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+
+
+</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

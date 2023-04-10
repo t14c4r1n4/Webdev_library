@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Carina Arnold">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>PHP - Webdevelopment Cheatsheet</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+        <link href="../../stylesheets/css.css" rel="stylesheet">
+        <link href="../../stylesheets/bootswatch.less" rel="stylesheet">
+        <link href="../../stylesheets/variables.less" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Webdevelopment Cheatsheet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Database <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../database/allgemein/">Relationales Datenbanksystem (RDBS)</a>
+</li>
+                                    
+<li >
+    <a href="../../database/befehle/">Befehle</a>
+</li>
+                                    
+<li >
+    <a href="../../database/joins/">JOINS</a>
+</li>
+                                    
+<li >
+    <a href="../../database/operatoren/">Operatoren</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Includes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../includes/abbreviations/">Abbreviations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informatik <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../informatik/Allgemeines/">Grundlagen der Informationstechnik</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../javascript/basics/">Output</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../linux/Rechte/">Rechte</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/basics/">Linux command basics</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/webserver_einrichten/">Webserver einrichten</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Php <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">PHP</a>
+</li>
+                                    
+<li >
+    <a href="../konfiguration/">php.ini</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/exception_handling/">Exception Handling</a>
+</li>
+                                    
+<li >
+    <a href="../../python/modules/">Modularisierung</a>
+</li>
+                                    
+<li >
+    <a href="../../python/oop/">OOP</a>
+</li>
+                                    
+<li >
+    <a href="../../python/virtual/">Virtuelle Umgebung erstellen</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/frameworks/create_django/">Django</a>
+</li>
+            
+<li >
+    <a href="../../python/frameworks/django/">Django</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Functions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/functions/functions/">Funktionen</a>
+</li>
+            
+<li >
+    <a href="../../python/functions/functions_begriffe/">Begriffe</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/libraries/l_math/">Math</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_random/">L random</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_tkinter/">Tkinter</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../react/jsx/">JSX</a>
+</li>
+                                    
+<li >
+    <a href="../../react/react/">React</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../linux/webserver_einrichten/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../konfiguration/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#php">PHP</a></li>
+            <li><a href="#datentypen">Datentypen</a></li>
+            <li><a href="#daten-konvertieren">Daten konvertieren</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="php">PHP</h1>
+<h2 id="datentypen">Datentypen</h2>
+<table>
+  <tbody>
+    <tr>
+      <td>string</td>
+      <td>Text
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  $name = &#39;Max&#39;;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  echo $name; // =&gt; Max
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  echo &#39;Hallo $name!&#39;; // =&gt; Hallo $name!
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  $name = &quot;Max&quot;;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  echo &quot;Hallo $name!&quot;; // =&gt; Hallo Max!
+</code></pre></div>
+</td>
+      <td>
+        <p>in einfachen oder doppelten Anführungszeichen;</p>
+        <p>doppelte Anführungszeichen haben Funktionen:</p>
+        <p>- "Escape-Sequenzen" (*/t* = Tabulator, */n* = Zeilenumbruch)</p>
+        <p>- "Auflösung" von Variablen in Werte</p>
+        <p>- Maskierung mit Backslash (Anführungszeichen im String werden maskiert)</p>
+        <p>- Konkatenation</p>
+      </td>
+    </tr>
+    <tr>
+      <td>int (integer)</td>
+      <td>Ganzzahl</td>
+      <td>
+        <p>arithmetische Operationen, arithmetische Zuweisungsoperatoren (+=), increment/ decrement-Operatoren</p>
+      </td>
+    </tr>
+    <tr>
+      <td>bool (boolean)</td>
+      <td>true/ false</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>double, float, real</td>
+      <td>Fließkommazahl</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>null</td>
+      <td>ein nicht existierender Wert</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>Binärdaten</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>resource</td>
+      <td>Referenzen auf externe Ressource</td>
+      <td>Da resource-Variablen spezielle Referenzen auf geöffnete Dateien, Datenbankverbindungen, Grafikbereiche usw. enthalten, ist die Konvertierung von resource nicht sinnvoll.</td>
+    </tr>
+    <tr>
+    <td>never</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <td>void</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <td>relative class types</td>
+    <td>self, parent and static</td>
+    <td>&nbsp;</td>
+    </tr>
+    </tbody>
+    <tr>
+    <td>literal</td>
+    <td>false/ true</td>
+    <td>&nbsp;</td>
+    </tr>  
+  </tbody>
+</table>
+<h3 id="composite-types">Composite Types</h3>
+<table>
+  <tbody>
+    <tr>
+    <td>object</td>
+    <td>Instanz einer Klasse</td>
+    <td>kann aus mehreren Eigenschaften und Methoden bestehen</td>
+    </tr>
+    <tr>
+    <td>array</td>
+    <td>Sammlung von Werten</td>
+    <td>kann aus verschiedenen Datentypen bestehen und ist sehr flexibel</td>
+    </tr>
+    <tr>
+    <td>class</td>
+    <td>Vorlage für Objekte</td>
+    <td>kann als Vorlage für die Erstellung von Objekten verwendet werden; besteht aus Eigenschaften und Methoden und kann auch von anderen Klassen erben</td>    
+  </tbody>
+</table>
+
+<h3 id="intersection-types">Intersection Types (&amp;)</h3>
+<p><em>ab PHP 8.0</em></p>
+<p>Mithilfe vom <strong>&amp;-Operator</strong> können mehrere Typen kombiniert werden.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>T&amp;U =&gt; Typ T UND Typ U
+</code></pre></div></p>
+<h3 id="union-types">Union Types (|)</h3>
+<p><em>ab PHP 8.0</em></p>
+<p>Mit dem <strong>Pipe-(|)-Operator</strong> kann man eine ODER-Funktion kombinieren. 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>T|U =&gt; Typ T ODER Typ U
+</code></pre></div></p>
+<h2 id="daten-konvertieren">Daten konvertieren</h2>
+<h3 id="casting">Casting</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  $zahl = &quot;1&quot;;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  var_dump($zahl);
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  echo &quot;&lt;br /&gt;&quot;;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  $zahl = (int) $zahl;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  var_dump($zahl);
+</code></pre></div>
+<p>Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  string(1) &quot;1&quot;;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  int(1);
+</code></pre></div></p>
+<h3 id="type-juggling">Type Juggling</h3>
+<p>PHP kann automatisch mit den Dateitypen "jonglieren". D.h. im Kontext konvertiert PHP den Dateityp:</p>
+<table>
+  <tbody>
+    <tr>
+      <td>numeric</td>
+      <td>float, int</td>
+    </tr>
+    <tr>
+      <td>string</td>
+      <td>echo, print, concatenation, string interpolation</td>
+    </tr>
+    <tr>
+      <td>logical</td>
+      <td><, =, >, AND, OR, XOR, !, &&, ||; => bool</td>
+    </tr>
+    <tr>
+      <td>integral and string</td>
+      <td>&, |, ^(XOR), ~ (Nicht), <<, >></td>
+    </tr>
+    <tr>
+      <td>comparative</td>
+      <td>==, ===, !=, <>, !==, <, >, <=, >=, <=></td>
+    </tr>
+    <tr>
+      <td>function</td>
+      <td>
+        <p>wenn ein Rückgabewert deklariert wurde; der Wert muss dem deklarierten Wert des Typs entsprechen;</p>
+        <p>Ausnahmen:</p> 
+        <ol>
+        <li>Wert ist vom Typ int und der deklarierte Typ ist float => int wird in float konvertiert;</li> 
+        <li>Wenn der deklarierte Wert ein scalar type ist, wird der Wert in einen scalar type konvertiert und der "coercive typing mode" (none-strict) ist aktiviert
+        </li></ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="weitere-funktionen">weitere Funktionen</h3>
+<table>
+  <tbody>
+    <tr>
+      <td>intval</td>
+      <td>variable -> integer</td>
+    </tr>
+    <tr>
+      <td>floatval/ doubleval</td>
+      <td>variable -> float</td>
+    </tr>
+    <tr>
+      <td>strval</td>
+      <td>variable -> string</td>
+    </tr>
+    <tr>
+      <td>settype</td>
+      <td>liefert bool zurück, der angibt ob die Konvertierung erfolgreich war; Variable wird als Referenz übergeben;</td>
+    </tr>
+    <tr>
+      <td>var_dump</td>
+      <td>gibt Datentyp und Wert aus</td>
+    </tr>
+    <tr>
+      <td>gettype</td>
+      <td>liest den Datentyp aus</td>
+    </tr>
+    <tr>
+      <td>is_int</td>
+      <td>überprüft auf Datentyp integer (Achtung, bei 1.0 kommt false zurück)</td>
+    </tr>
+    <tr>
+      <td>is_float</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>is_numeric</td>
+      <td>überprüft auf Datentyp numerisch</td>
+    </tr>
+    <tr>
+      <td>is_array</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>is_bool</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>is_nan</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>is_object</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>is_resource</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>is_string</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>empty</td>
+      <td>überprüft ob die variable leer ist (Vorsicht, leer ist dehnbarer Begriff)</td>
+    </tr>
+    <tr>
+      <td>isset</td>
+      <td>Gegenteil von is_null (Vorsicht)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="verknupfungsoperator">Verknüpfungsoperator</h4>
+<p><code>.</code> (Punkt)</p>
+<h4 id="verknupfender-zuweisungsoperator">verknüpfender Zuweisungsoperator</h4>
+<p><code>.=</code> (Concatenation)</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

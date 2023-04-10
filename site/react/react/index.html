@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Carina Arnold">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>React - Webdevelopment Cheatsheet</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+        <link href="../../stylesheets/css.css" rel="stylesheet">
+        <link href="../../stylesheets/bootswatch.less" rel="stylesheet">
+        <link href="../../stylesheets/variables.less" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Webdevelopment Cheatsheet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Database <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../database/allgemein/">Relationales Datenbanksystem (RDBS)</a>
+</li>
+                                    
+<li >
+    <a href="../../database/befehle/">Befehle</a>
+</li>
+                                    
+<li >
+    <a href="../../database/joins/">JOINS</a>
+</li>
+                                    
+<li >
+    <a href="../../database/operatoren/">Operatoren</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Includes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../includes/abbreviations/">Abbreviations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informatik <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../informatik/Allgemeines/">Grundlagen der Informationstechnik</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../javascript/basics/">Output</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../linux/Rechte/">Rechte</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/basics/">Linux command basics</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/webserver_einrichten/">Webserver einrichten</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Php <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../php/datentypen/">PHP</a>
+</li>
+                                    
+<li >
+    <a href="../../php/konfiguration/">php.ini</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/exception_handling/">Exception Handling</a>
+</li>
+                                    
+<li >
+    <a href="../../python/modules/">Modularisierung</a>
+</li>
+                                    
+<li >
+    <a href="../../python/oop/">OOP</a>
+</li>
+                                    
+<li >
+    <a href="../../python/virtual/">Virtuelle Umgebung erstellen</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/frameworks/create_django/">Django</a>
+</li>
+            
+<li >
+    <a href="../../python/frameworks/django/">Django</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Functions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/functions/functions/">Funktionen</a>
+</li>
+            
+<li >
+    <a href="../../python/functions/functions_begriffe/">Begriffe</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../python/libraries/l_math/">Math</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_random/">L random</a>
+</li>
+            
+<li >
+    <a href="../../python/libraries/l_tkinter/">Tkinter</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../jsx/">JSX</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">React</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../jsx/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#react">React</a></li>
+            <li><a href="#allgemein">Allgemein</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="react">React</h1>
+<h2 id="allgemein">Allgemein</h2>
+<h3 id="begriffe">Begriffe</h3>
+<p>props = Eigenschaften
+render = Anzeigen von etwas
+immutable = unveränderlich
+Reconciliation = Abgleich
+transpiling = Prozess, bei dem der Sourcecode von einer Sprache in ein entsprechendes funktional identisches Gegenstück einer anderen Sprache umgewandelt wird.</p>
+<h3 id="komponenten">Komponenten</h3>
+<ul>
+<li>Komponenten unterteilt den Code in einzelne Stücke</li>
+<li>eine Komponente hat zwingend einen return-Wert</li>
+<li>dieser kann entweder ein <code>null</code> sein, ein React-Element oder ein String/ Array</li>
+<li>Komponenten müssen mit einem Großbuchstaben anfangen</li>
+<li>BestPractice: UpperCamelCase-Form</li>
+</ul>
+<h4 id="function-components">Function Components</h4>
+<ul>
+<li>ist eine gewöhnliche JavaScript-Funktion, z.B.:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        function Hello(props) {
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>          return &lt;div&gt;Hello {props.name}&lt;/div&gt;;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        }
+</code></pre></div>
+<h4 id="class-components">Class Components</h4>
+<ul>
+<li>bekommt keine Argumente übergeben</li>
+<li>kann einzig über die Instanz-Eigenschaft <code>this.props</code> auf die Props zugreifen</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>        class Hello extends React.Component {
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        render() {
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        }
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>}
+</code></pre></div>
+<em>Ein Kriterium, das beide Arten von Komponenten gemeinsam haben, ist, dass der displayName, also der Name einer gültigen Komponente, stets mit einem Großbuchstaben anfängt. Der Rest des Namens kann aus Großbuchstaben oder Kleinbuchstaben bestehen, wichtig ist lediglich, dass der erste Buchstabe stets ein Großbuchstabe ist!</em></p>
+<h4 id="purecomponent">PureComponent</h4>
+<h3 id="code-bestandteile">Code-Bestandteile</h3>
+<p><code>extends React.Component</code>:</p>
+<ul>
+<li>erweitert die react-interne Klasse, wodurch unsere Klasse zu einer Komponente wird, die wir in React nutzen können.</li>
+</ul>
+<p><code>render</code>:</p>
+<ul>
+<li>zwingender Bestandteil einer Komponente</li>
+<li>dadurch wird React mitgeteilt, wie die Komponente dargestellt (gerendert) werden soll</li>
+<li>dient dazu, <strong>deklarativ</strong> den Zustand unseres UI zu beschreiben</li>
+<li>'render'-Methode sollte als BestPractice als letzte Methode einer Komponente definiert werden</li>
+</ul>
+<p><code>React.createElement()</code>:</p>
+<ul>
+<li>eine von 3 Top-Level API-Methoden</li>
+<li>erwartet 1-n Parameter: - <strong>Typ</strong>: bspw. 'div', 'span', 'p' - <strong>Props</strong>: schreibgeschützte "Eigenschafts-Objekte" einer Komponente - beliebig viele <strong>Kind-Elemente</strong>: bspw. React-Elemente, Arrays, Funktionen, einfacher Text</li>
+</ul>
+<p><code>ReactDOM.render(Element, Container)</code>:</p>
+<ul>
+<li>zweite Library</li>
+<li>ist zuständig für das Zusammenspiel von React mit dem DOM</li>
+<li>besitzt nur sehr wenige Top-Level-API-Methoden</li>
+<li>ReactDOM sorgt dafür, dass wir die angegebene Komponente im Browser sehen können</li>
+<li>Syntax:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>        ReactDOM.render([Element],[Container])
+</code></pre></div>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>Node.js</li>
+<li>npm</li>
+<li>yarn</li>
+<li>babel
+  presets:
+  <code>@babel/preset-env
+    @babel/preset-react
+    @babel/plugin-proposal-object-rest-spread
+    @babel/plugin-proposal-class-properties  
+    @babel/plugin-syntax-dynamic-import</code></li>
+<li>webpack</li>
+<li>esLint</li>
+<li>prettier</li>
+<li>zero config setup</li>
+</ul>
+<h3 id="rendering">Rendering</h3>
+<p>Im <abbr title="Hyper Text Markup Language">HTML</abbr>-Code muss ein Element mit einer eindeutigen ID (in diesem Fall 'root') gekennzeichnet werden. Anschließend kann man über folgenden Aufruf den Code rendern.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>        const [name] = &lt;div&gt;[Text]&lt;/div&gt;;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        ReactDOM.render([name], document.getElementById(&#39;root&#39;));
+</code></pre></div>
+<p>document.getElementByID findet das entsprechende Element und übergibt den Code.</p>
+<p><strong>React-Elemente sind immutable = unveränderlich</strong></p>
+<h3 id="diverses">diverses</h3>
+<p><code>state</code>
+verwenden damit der Click gespeichert wird</p>
+<div class="highlight"><pre><span></span><code>    In JavaScript classes, you need to always call ```super``` when defining the constructor of a subclass. All React component classes that have a constructor should start with a super(props) call.
+</code></pre></div>
+<h4 id="beispiel">Beispiel</h4>
+<p>Html-Datei:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>        &lt;!DOCTYPE html&gt;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>        &lt;html&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        &lt;head&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        &lt;title&gt;Hallo React!&lt;/title&gt;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        &lt;/head&gt;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        &lt;body&gt;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        &lt;script crossorigin src=&quot;https://unpkg.com/react@16.8.4/umd/react.development.js&quot;&gt;&lt;/script&gt;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        &lt;script crossorigin src=&quot;https://unpkg.com/react-dom@16.8.4/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        &lt;script&gt;
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        // Platzhalter für unsere erste Komponente
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        &lt;/script&gt;
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        &lt;/body&gt;
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        &lt;/html&gt;
+</code></pre></div>
+<p>JS-Datei:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>        class HelloWorld extends React.Component {
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>        render() {
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        return React.createElement(
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        &#39;div&#39;,
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        { id: &#39;hello-world&#39; },
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        &#39;Hello World&#39;
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        );
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        }
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        }
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        ReactDOM.render(
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        React.createElement(HelloWorld),
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        document.getElementById(&#39;root&#39;)
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>);
+</code></pre></div></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
